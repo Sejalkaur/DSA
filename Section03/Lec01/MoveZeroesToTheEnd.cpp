@@ -25,7 +25,7 @@ vector<int> moveZeros(int n, vector<int> arr) {
   int j=-1;
   for(int i=0;i<n;i++){
 	  if(arr[i]==0){
-		  j=i; //store their indices
+		  j=i; //j was always the index of the zeroth element
 		  break;
 	  }
   }
