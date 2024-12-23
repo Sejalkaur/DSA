@@ -1,6 +1,6 @@
 //link: https://www.geeksforgeeks.org/problems/merge-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=merge-sort
 void merge(vector<int>& arr, int l, int mid, int h){
-      vector<int> temp;
+      vector<int> temp;//temprary array to store merged array
       int left = l;
       int right = mid + 1;
       
@@ -14,7 +14,7 @@ void merge(vector<int>& arr, int l, int mid, int h){
               right++;
           }
       }
-      //if the right one is exhausted
+      //if the right one is exhausted(remaining elements in left)
       while(left <= mid){
           temp.push_back(arr[left]);
           left++;
@@ -31,7 +31,7 @@ void merge(vector<int>& arr, int l, int mid, int h){
   }
     void mergeSort(vector<int>& arr, int l, int h) {
         // code here
-        //base case
+        //base case(if only on element exist)
         if(l == h)return;
         
         int mid = (l + h) / 2;
